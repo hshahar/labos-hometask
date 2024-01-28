@@ -1,0 +1,32 @@
+In order to complete the requested home task I built a module in terraform that would perform the necessary action.
+All needed values can be changed using TFVARS file. All needed files are located under file folder. This is the flow that I used to create an instance on ec2 with nwe vpc and all the necessary components, transfer the files to the new instance, use docker compose to create the docker app and the docker nginx.
+
+Process details: 
+I created a VPC with subnet, SG, route table and internet gateway under aws provider; I
+created aws instance with Provisiner that copies the file to the new instance; docker and docker compose are installed with user data and remote exec and finally I created containers using docker compose file. 
+
+ The module is created with several parts:
+aws provider
+resource vpc module 
+resource subnet
+resource gateway
+resource route table
+resource SG
+resource aws instance
+provisioner (copy file)
+provisioner (remote-exec)
+
+Prerequisites for the task:
+terraform installed
+pem file ( put it under root project and change variable in TFVARS file)
+
+Instructions: 
+clone the git repo 
+run terraform init
+terraform plan
+terraform apply
+
+Run on the browser http://<publicip>:8080/elastic/elasticsearch
+
+
+

@@ -1,0 +1,8 @@
+region            = "us-west-2"
+instance_type     = "t2.2xlarge"
+ami               = "ami-08e2c1a8d17c2fe17"
+vpc_cidr          = "10.0.0.0/16"
+route_cidr_block  = "0.0.0.0/0"
+vpc_id_cidr       = "10.0.2.0/24"
+availability_zone = "us-west-2a"
+pem_file          = "sharap.pem"
